@@ -1,7 +1,7 @@
 PROJECT TITLE: JavaGPIO
 PURPOSE OF PROJECT: To make the GPIO work in Java development
 DATE: 5/23/19
-AUTHORS: Jack Eastman
+AUTHORS: Jack Eastman, Mrs. Kelly
 USER INSTRUCTIONS:
 
 1) Install pi4j from either the pi4j website at pi4j.com/1.2/download.html
@@ -12,6 +12,7 @@ USER INSTRUCTIONS:
 2) Ensure that the latest version of WiringPi is installed by running
 
     gpio -v
+    gpio -readall // will give you a listing of the pins
 
    Compare the version number with the number on the website wiringpi.com/download-and-install
    This step is crucial in newer Raspberry pi kernels, as their processor identifier changed
@@ -64,8 +65,8 @@ If you run into an error where the file won't run because the hardware cannot be
 
 The pinout and gpio numbers are, by default, the same as in wiringPi. They are not the standard pin numbers.
     See the gpio pinout at https://pi4j.com/1.2/pin-numbering-scheme.html
-    The pinout has been tested to be true on a Raspberry Pi 3 B+, except for pin 7.
-    Pin 7 is said to not exist in runtime on pi4j. Pin 18 does not exist.
+    The pinout has been tested to be true on a Raspberry Pi 3 B+.
+    Pin 17, 18, 19, and 20 do not exist on the version 1 boards that we have.
     
 RASPBERRY PI CAMERA IN JAVA
 
