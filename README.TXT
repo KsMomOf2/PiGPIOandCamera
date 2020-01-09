@@ -2,6 +2,7 @@ PROJECT TITLE: JavaGPIO
 PURPOSE OF PROJECT: To make the GPIO work in Java development
 DATE: 5/23/19
 AUTHORS: Jack Eastman, Mrs. Kelly
+
 USER INSTRUCTIONS:
 
 1) Install pi4j from either the pi4j website at pi4j.com/1.2/download.html
@@ -45,16 +46,27 @@ USER INSTRUCTIONS:
    
 4) Write the code, using as necessary the documentation from https://pi4j.com/1.2/apidocs/index.html
 
-5) To compile if the IDE's compile does not work, which it often doesn't.
-   Type the following command into the terminal
+5) To run from Geany IDE:
 
-    javac -classpath .:classes:/opt/pi4j/lib/'*' -d . $filename
 
-   The IDE's compiler will not recognize the import statements and throw an error
 
-6) To run a program utilizing pi4j, run the following command in the terminal
+6) To run from Terminal:
 
-    sudo pi4j --run $filename
+
+    Compile:
+
+         javac -classpath .:classes:/opt/pi4j/lib/'*' -d . $filename
+    
+    Run:
+    
+         sudo pi4j --run $filename
+         
+7) To run from Geany, set the Build Commands (Build Menu) to the following:
+    
+    Compile javac  -classpath .:classes:/opt/pi4j/lib/'*' -d . "%f"
+    Run     pi4j --run "%f"
+    
+    then use the menu to compile/run
 
 NOTES:
 When compiling and running files, make sure you are in the correct directory, the same as the file
